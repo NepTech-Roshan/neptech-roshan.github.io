@@ -1,0 +1,175 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style type="text/css">
+       *{
+   margin:0px;
+   padding:0px;
+ }
+ }
+ #login-form{
+   display:none;
+   align-items:center;
+   padding:250px;
+   position:fixed;
+     }
+.form-box{
+  width:380px;
+  height:480px;
+  position:relative;
+  background:rgba(0,0,0,0.3);
+  padding:0;
+  overflow: hidden;
+}
+.button-box{
+  width:220px;
+  margin:35px auto;
+  position:relative;
+  box-shadow:0px 0px 29px 20px #ff61241f;
+  border-radius:30px;
+}
+.toggle-btn{
+  padding:10px 30px;
+  cursor:pointer;
+  background:transparent;
+  border:0px;
+  outline:none;
+  position:relative;
+}
+#btn{
+  top:0;
+  left:0;
+  position:absolute;
+  width:110px;
+  height:100%;
+  background:#f3c3693;
+  border-radius:30px;
+  transition: .5s;
+}
+.input-group-register{
+  top:90px;
+  text-align:center;
+  position:absolute;
+  width:400px;
+  transition: .5s;
+}
+.input-field{
+  width:100%;
+  padding:10px 10px;
+  margin:5px 0;
+  border-left:0;
+  border-top:0;
+  border-right:0;
+  border-bottom:1px solid #999;
+  outline:none;
+  background: transparent;
+}
+.submit-btn{
+  width:85%;
+  padding:10px 30px;
+  cursor:pointer;
+  display:block;
+  margin:auto;
+  background:#f3c693;
+  border:0;
+  outline:none;
+  border-radius:30px;
+}
+.check-box{
+  margin:30px 10px 34px;
+}
+.span{
+  color:red;
+  font-size:12px;
+  bottom:68px;
+  position:absolute;
+}
+#login{
+  left:50px;
+}
+}
+#login input{
+  color:black;
+  font-size:15px;
+}
+#register{
+  left:450px;
+  background:black;
+  align-items:center;
+}
+#register input{
+  color:white;
+  font-size:17.5px;
+}
+table, TD{
+  border: 4px solid black;
+   border-spacing: 2px;
+}
+
+    </style>
+  </head>
+  <body>
+    <center>
+    <table>
+      <TD>
+     <div id='login-form'class='login-page'>
+        <div class="form-box">
+          <div class='button-box'>
+            <div id='btn'></div>
+              <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+              <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+            </div>
+            <form id='login'class='input-group-login'>
+              <input type='text'class='input-field'placeholder='Email Id'required>
+              <input type='password'class='input-field'placeholder="Enter Password"required>
+              <input type='checkbox'class='check-box'>
+              <span>Remember Password</span>
+           <button type='submit'class='submit-btn'><a href="homepage.html">Log In</a></button>
+            </form>
+           
+            <form id='register'class='input-group-register'>
+              <input type='text'class='input-field'placeholder='First Name'required>
+              <input type='text'class='input-field'placeholder='Last Name'required>
+              <input type='email'class='input-field'placeholder='Email Id'required>
+               <input type='password'class='input-field'placeholder='Entet Password'required>
+                 <input type='password'class='input-field'placeholder='Confirm Password'required>
+               <input type='checkbox'class='check-box'>
+               <span style="color:white">I agree to the terms and conditions.</span>
+               <button type='submit'class='submit-btn'>Register</button>
+            </form>
+            </div>
+            </TD>
+            </table>
+            </center>
+            <script>
+var x=document.getElementById('login');
+var y=document.getElementById('register');
+var z=document.getElementById('btn');
+function register()
+{
+  x.style.left='-400px';
+  y.style.left='0px';
+  z.style.left='110px';
+}
+function login()
+{
+  x.style.left='150px';
+  y.style.left='450px';
+  z.style.left='10px';
+}
+</script>
+<script>
+var modal=document.getElementById('login-form');
+window.onclick= function(event)
+{
+  if(event.target==modal)
+  {
+    modal.style.display="none";
+  }
+}
+,
+</script>
+  </body>
+</html>
